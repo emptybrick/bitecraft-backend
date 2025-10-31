@@ -32,6 +32,7 @@ app.use('/meals', mealsRouter);
 app.use('/recipes', recipesRouter);
 app.use('/ingredients', ingredientsRouter);
 
-app.listen(3000, () => {
-  console.log('The express app is ready!');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${ PORT }`);
 });
